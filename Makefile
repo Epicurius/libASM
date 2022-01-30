@@ -18,6 +18,7 @@ $(NAME):	$(OBJ)
 
 main:		re
 			@gcc main.c libasm.a
+			@rm *.o
 			@./a.out
 
 clean:

@@ -5,9 +5,8 @@ section .text
 	global _ft_bzero
 
 _ft_bzero:
-_loop:
 	mov [rdi + rsi - 1], byte 0
 	dec rsi
 	cmp rsi, 0
-	jnz _loop
+	jnz _ft_bzero
 	ret

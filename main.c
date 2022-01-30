@@ -28,18 +28,17 @@ char *text = "Hello Worldqwef qwrgqw ewrg ethdrt herdthrth \
 
 int main()
 {
+	//char str1[100] = "This is ", str2[] = "programiz.com";
+	//ft_strcat(str1, str2);
+	//printf("%s\n", str1);
 
-	char str1[100] = "This is ", str2[] = "programiz.com";
-	ft_strcat(str1, str2);
-	printf("%s\n", str1);
-
-	//char str[10];
-	//memset(str, 0, 10);
-	//ft_memset(str, 9, 10);
-	//ft_bzero(str, 2);
-	//for (int i = 0; i < 10; i++)
-	//	printf("%d ", str[i]);	
-	//printf("\n");	
+	char str[10];
+	memset(str, 0, 10);
+	ft_memset(str, 9, 10);
+	ft_bzero(str, 2);
+	for (int i = 0; i < 10; i++)
+		printf("%d ", str[i]);	
+	printf("\n");	
 
 	//int len;
 	//ft_timer_start();
