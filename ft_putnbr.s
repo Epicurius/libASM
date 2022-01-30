@@ -6,9 +6,9 @@ section .bss
 	digitSpacePos resb 8
 
 section .text
-	global _main
+	global _start 
 
-_main:
+_start:
 	mov rax, 123
 	call _printRAX
 
@@ -18,10 +18,10 @@ _main:
 
 _printRAX:
 	mov rcx, digitSpace
-	mov	rbx, 10
+	mov	rbx, 10					; New line at beginning
 	mov [rcx], rbx
-	inc rcx
-	mov [digitSpacePos], rcx
+	inc rcx						; rcx++
+	mov [digitSpacePos], rcx	; set ptr
 
 _printRAXLoop:
 	mov rdx, 0
@@ -52,7 +52,7 @@ _printRAXLoop2:
 	dec rcx
 	mov [digitSpacePos], rcx
 
-	cmp rcx, digitSpace
+	cmp rcx, digitSpace 		; =does not work cant figure out why
 	jge _printRAXLoop2
 
 	ret
