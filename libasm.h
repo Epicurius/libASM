@@ -2,7 +2,7 @@
  * https://github.com/Epicurius
  * 
  * Created: 2022/01/30 11:03:51 Niklas Neronin
- * Updated: 2022/01/31 14:12:29 Niklas Neronin
+ * Updated: 2022/01/31 15:33:44 Niklas Neronin
  */
 
 #ifndef LIBASM_H
@@ -18,5 +18,9 @@ int			ft_isdigit(int c);
 int			ft_isalnum(int c);
 int			ft_isascii(int c);
 char		*ft_strdup(const char *s);
+int			ft_isprint(int c);
+int			ft_toupper(int c);
+int			ft_tolower(int c);
+void		ft_putstr(char const *s);
 
 #endif

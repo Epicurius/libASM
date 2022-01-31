@@ -6,7 +6,11 @@ SFILES =	ft_strlen.s\
 			ft_isdigit.s\
 			ft_isalnum.s\
 			ft_isascii.s\
+			ft_isprint.s\
 			ft_memcpy.s\
+			ft_toupper.s\
+			ft_tolower.s\
+			ft_putstr.s\
 			ft_strdup.s
 
 SDIR		=	srcs
