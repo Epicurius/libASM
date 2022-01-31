@@ -1,16 +1,27 @@
-SRC =		ft_strlen.s\
+SFILES =	ft_strlen.s\
 			ft_memset.s\
 			ft_bzero.s\
-			ft_strcat.s
+			ft_strcat.s\
+			ft_isalpha.s\
+			ft_isdigit.s\
+			ft_isalnum.s\
+			ft_isascii.s\
+			ft_memcpy.s\
+			ft_strdup.s
 
-OBJ =		$(SRC:%.s=%.o)
+SDIR		=	srcs
+SRCS		=	$(addprefix $(SDIR)/,$(SFILES))
+OBJ			=	$(SRCS:.s=.o)
 
 NAME =		libasm.a
 
-%.o: %.s
-	@nasm -f macho64 $<
+$(ODIR):
+	@mkdir -p $@
 
-all:		$(NAME)
+$(SDIR)/%.o: $(SDIR)/%.s
+	@nasm -f macho64 $< -o $@
+
+all:		$(ODIR) $(NAME)
 
 $(NAME):	$(OBJ)
 			@ar -rc $(NAME) $(OBJ)
@@ -18,7 +29,7 @@ $(NAME):	$(OBJ)
 
 main:		re
 			@gcc main.c libasm.a
-			@rm *.o
+			@rm srcs/*.o
 			@./a.out
 
 clean:
