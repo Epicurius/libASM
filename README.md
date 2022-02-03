@@ -1,21 +1,26 @@
 # libASM
+
+**!! Work in progress !!**
+
+LibASM is a library in assembly x64 Macho. It contain all my C library functions rewriten in ASM.
+
 ```
 rax     ; Return value
-rbx     ; Callee saved
+rbx     ; 
 rcx     ; Arg 4
 rdx     ; Arg 3
 rsi     ; Arg 2
 rdi     ; Arg 1
 rsp     ; Stack ptr
-rbp     ; Callee saved
+rbp     ; 
 r8      ; Arg 5
 r9      ; Arg 6
-r10     ; Caller saved
-r11     ; Caller saved
-r12     ; Callee saved
-r13     ; Callee saved
-r14     ; Callee saved
-r15     ; Callee saved
+r10     ; 
+r11     ;
+r12     ; 
+r13     ; 
+r14     ; 
+r15     ;
 ```
 ```
 jmp     ; Unconditional Jump
